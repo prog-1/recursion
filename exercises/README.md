@@ -61,7 +61,7 @@ after the recursive call.
 
 ## 3. Fibonacci
 
-Output all Fibonacci numbers until `n`.
+Output first `n` Fibonacci numbers.
 
 Estimate time / space complexity of your implementation. It is not
 allowed to use `for` loops.
