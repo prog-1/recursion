@@ -52,7 +52,7 @@ fmt.Println(rearrange(s, 9), s) // Output: 0 [0 6 1 7 5 9 6 5 2 9]
 
 1) Output all numbers from 1 to `n` using recursion. It is not allowed to use `for` loops.
 
-2) Output all numbers from `n` to 1. The program must be implemented using the same function as in (2).
+2) Output all numbers from `n` to 1. The program must be implemented using the same function as in (1).
 The only change must be a place where you output the numbers. The purpose of this task is to understand
 how recursion winds and unwinds.
 
