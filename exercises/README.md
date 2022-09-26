@@ -61,16 +61,22 @@ after the recursive call.
 
 ## 3. Fibonacci
 
-Output all Fibonacci numbers until `n`. Estimate time / space complexity of your implementation. It is not
+Output all Fibonacci numbers until `n`.
+
+Estimate time / space complexity of your implementation. It is not
 allowed to use `for` loops.
 
-## 4. Is power for 2?
+## 4. Is power of 2?
 
-Your program must check whether the given number is an exact power of 2. It is not allowed to use `for` loops.
+Your program must check whether the given number is an exact power of 2.
+
+Estimate time / space complexity of your implementation. It is not allowed to use `for` loops.
 
 ## 5. Sum digits.
 
-Your program must sum all digits of the given number. It is not allowed to use `for` loops.
+Your program must sum all digits of the given number.
+
+Estimate time / space complexity of your implementation. It is not allowed to use `for` loops.
 
 ## 6. Max number.
 
@@ -78,8 +84,10 @@ Your program must sum all digits of the given number. It is not allowed to use `
 
 2) Your program must find the second max in the given slice. 
 
-It is not allowed to use `for` loops.
+Estimate time / space complexity of your implementation. It is not allowed to use `for` loops.
 
 ## Optional: Non-recursive quick sort
 
 Attempt to implement non-recursive version of quick sort. Hint: use a slice to emulate hardware stack.
+
+Estimate time / space complexity of your implementation.
