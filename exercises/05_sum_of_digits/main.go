@@ -13,6 +13,9 @@ func sum(n, sum1 int) {
 	}
 }
 
+//time complexity: O(n)
+//space complexity: O(n)
+
 func main() {
 	var n, sum1 int
 	fmt.Scan(&n)
