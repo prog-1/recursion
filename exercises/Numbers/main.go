@@ -2,26 +2,28 @@ package main
 
 import "fmt"
 
-func num1(n, i int) {
-	if n < i {
-		return
+func num1(n int, s []int) []int {
+	if n < len(s)+1 {
+		return s
 	}
-	fmt.Println(i)
-	i++
-	num1(n, i)
+	s = append(s, len(s)+1)
+	return num1(n, s)
 }
-func num2(n int) {
+func num2(n int, s []int) []int {
 	if n == 0 {
-		return
+		return s
 	}
-	fmt.Println(n)
+	s = append(s, n)
 	n--
-	num2(n)
+	return num2(n, s)
+}
+func num(n int) (s1, s2 []int) {
+	var s []int
+	if n < 1 {
+		return nil, nil
+	}
+	return num1(n, s), num2(n, s)
 }
 func main() {
-	var n int
-	i := 1
-	fmt.Scan(&n)
-	num1(n, i)
-	num2(n)
+	fmt.Println(num1(8, []int{}))
 }

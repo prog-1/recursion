@@ -2,19 +2,24 @@ package main
 
 import "fmt"
 
-func sumd(n, sum int) {
+func cycle(n, sum int) int {
 	sum += n % 10
 	n /= 10
 	if n == 0 {
-		fmt.Println(sum)
-		return
+		return sum
 	}
-	sumd(n, sum)
-
+	return cycle(n, sum)
+}
+func sumd(n int) int {
+	if n < 0 {
+		n *= -1
+	}
+	var sum int
+	return cycle(n, sum)
 }
 
 func main() {
-	var n, sum int
+	var n int
 	fmt.Scan(&n)
-	sumd(n, sum)
+	sumd(n)
 }

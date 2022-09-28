@@ -9,17 +9,17 @@ func TestFib(t *testing.T) {
 	for _, tc := range []struct {
 		name string
 		n    int
-		want []int
+		want bool
 	}{
-		{"1", 1, []int{0, 1}},
-		{"2", 8, []int{0, 1, 1, 2, 3, 5, 8, 13, 21}},
-		{"3", -1, nil},
-		{"4", 5, []int{0, 1, 1, 2, 3, 5}},
-		{"5", 0, nil},
-		{"6", 2, []int{0, 1, 1}},
+		{"1", 8, true},
+		{"2", 1, false},
+		{"3", -1, false},
+		{"4", 5, false},
+		{"5", 1024, true},
+		{"6", 128, true},
 	} {
 		t.Run(tc.name, func(t *testing.T) {
-			got := fib(tc.n)
+			got := isPower(tc.n)
 			if !reflect.DeepEqual(got, tc.want) {
 				t.Errorf("got = %v, want = %v", got, tc.want)
 			}
