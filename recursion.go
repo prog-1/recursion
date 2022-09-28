@@ -20,6 +20,16 @@ func partition(s []int) int {
 	}
 }
 
+// For each call:
+// - partition: space complexity O(1)
+// - for the quick sort itself (one call):
+//     - best case:  O(1) * O(LogN) = O(LogN)
+//     - worst case: O(1) * O(N)    = O(N)
+//
+// Stack, LIFO (Last In First Out)
+// In:  1 2 3 4 5
+// Out: 5 4 3 2 1
+// Stack contains: Local variables, Arguments, Return address
 func QuickSort(s []int) {
 	if len(s) < 2 {
 		return
