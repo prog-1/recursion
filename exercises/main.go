@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func rearrange(s []int, pivot int) (i int) {
 	l, r := 0, len(s)-1
@@ -25,7 +28,55 @@ func rearrange(s []int, pivot int) (i int) {
 	}
 }
 
+func numbers(n int) {
+	if n < 1 {
+		return
+	}
+	numbers(n - 1)
+	fmt.Println(n)
+}
+
+func fibonacci(n int) []int {
+	if n == 1 {
+		return []int{1}
+	}
+	if n == 2 {
+		return []int{1, 1}
+	}
+	a := fibonacci(n - 1)
+	return append(a, a[len(a)-1]+a[len(a)-2])
+}
+
+func isPowerOf2(n float64) bool {
+	if n == 2 || n == 1 {
+		return true
+	} else if n < 2 {
+		return false
+	}
+	return isPowerOf2(n / 2)
+}
+
+func numSum(n int) int {
+	if n == 0 {
+		return 0
+	}
+	return n%10 + numSum(n/10)
+}
+
+func maxNum(s []int) (int, int) {
+	if len(s) == 1 {
+		return s[0], math.MinInt
+	}
+	max1, max2 := maxNum(s[1:])
+	if max1 < s[0] {
+		return s[0], max1
+	} else if max2 < s[0] {
+		return max1, s[0]
+	}
+	return max1, max2
+
+}
+
 func main() {
-	s := []int{9, 6, 1, 7, 5, 9, 6, 5, 2, 6}
-	fmt.Println(rearrange(s, 9), s) // Output: 4 [2 5 1 5 6 9 6 7 6 9]
+	fmt.Println(fibonacci(30))
 }
