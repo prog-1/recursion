@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func cycle(n, sum int) int {
 	sum += n % 10
 	n /= 10
@@ -19,7 +17,4 @@ func sumd(n int) int {
 }
 
 func main() {
-	var n int
-	fmt.Scan(&n)
-	sumd(n)
 }
