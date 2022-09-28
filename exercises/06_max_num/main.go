@@ -18,9 +18,10 @@ func max(s []int) (int, int) {
 	}
 }
 
+//time complexity: O(n)
+//space complexity: O(n)
+
 func main() {
-	//var max1, max2 int
 	s := []int{23, 10, 15, 0, 9, 20, 10}
 	fmt.Println(max(s))
-	//max(s, max1, max2)
 }

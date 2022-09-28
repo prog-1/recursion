@@ -15,6 +15,9 @@ func power(n int) {
 	}
 }
 
+//time complexity: O(logn)
+//space complexity: O(logn)
+
 func main() {
 	var n int
 	fmt.Scan(&n)

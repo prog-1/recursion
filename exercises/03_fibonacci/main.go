@@ -13,6 +13,9 @@ func fibonacci(n, el1, el2 int) {
 	}
 }
 
+//time complexity: O(n)
+//space complexity: O(n)
+
 func main() {
 	var n, el1, el2 int
 	el1 = 0

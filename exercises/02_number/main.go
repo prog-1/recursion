@@ -13,6 +13,9 @@ func number(i int) {
 	}
 }
 
+//time complexity: O(n)
+//space complexity: O(n)
+
 func main() {
 	var i int
 	fmt.Scan(&i)
