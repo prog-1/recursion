@@ -28,6 +28,8 @@ func rearrange(s []int, pivot int) (i int) {
 	}
 }
 
+// Time complexity: O(n)
+// Space complexity: O(n)
 func numbers(n int) {
 	if n < 1 {
 		return
@@ -36,6 +38,8 @@ func numbers(n int) {
 	fmt.Println(n)
 }
 
+// Time complexity: O(n)
+// Space complexity: O(n)
 func fibonacci(n int) []int {
 	if n == 1 {
 		return []int{1}
@@ -47,6 +51,8 @@ func fibonacci(n int) []int {
 	return append(a, a[len(a)-1]+a[len(a)-2])
 }
 
+// Time complexity: O(log n)
+// Space complexity: O(log n)
 func isPowerOf2(n float64) bool {
 	if n == 2 || n == 1 {
 		return true
@@ -56,6 +62,8 @@ func isPowerOf2(n float64) bool {
 	return isPowerOf2(n / 2)
 }
 
+// Time complexity: O(len(n))
+// Space complexity: O(len(n))
 func numSum(n int) int {
 	if n == 0 {
 		return 0
@@ -63,6 +71,8 @@ func numSum(n int) int {
 	return n%10 + numSum(n/10)
 }
 
+// Time complexity: O(len(n))
+// Space complexity: O(len(n))
 func maxNum(s []int) (int, int) {
 	if len(s) == 1 {
 		return s[0], math.MinInt
