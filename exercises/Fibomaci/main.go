@@ -1,21 +1,32 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-func fib(n, x1, x2, cnt int) {
-	if cnt == n {
-		return
-	}
-	fmt.Print(" ", x1+x2)
+var s = []int{0, 1}
+var cnt = 1
+
+func cycle(n int) []int {
+	s = append(s, s[len(s)-1]+s[len(s)-2])
 	cnt++
-	x1, x2 = x2, x1+x2
-	fib(n, x1, x2, cnt)
-
+	if cnt != n {
+		cycle(n)
+	}
+	return s
+}
+func fib(n int) []int {
+	if n < 1 {
+		return nil
+	} else if n == 0 {
+		return []int{0}
+	} else if n == 1 {
+		return []int{0, 1}
+	}
+	return cycle(n)
 }
 func main() {
-	var n, x1 int
-	x2, cnt := 1, 1
+	var n int
 	fmt.Scan(&n)
-	fmt.Print(x1, " ", x2)
-	fib(n, x1, x2, cnt)
+	fmt.Println(fib(n))
 }
