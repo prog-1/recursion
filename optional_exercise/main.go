@@ -25,14 +25,25 @@ func partition(s []int) (i int) {
 // Out: 5 4 3 2 1
 // Stack contains: Local variables, Arguments, Return address
 
-func QuickSort(s []int) {
-	if len(s) < 2 {
-		return
+func QuickSort(s []int) (result []int) {
+	s1, s2 := make([]int, len(s)), make([]int, len(s))
+	copy(s1, s)
+	copy(s2, s)
+	for len(s1) >= 2 || len(s2) >= 2 {
+		if len(s1) >= 2 {
+			p := partition(s1)
+			s1 = s1[:p]
+			fmt.Println("s1:", s1)
+		}
+		result = append(result, s1...)
+		if len(s2) >= 2 {
+			p := partition(s2)
+			s2 = s2[p+1:]
+			fmt.Println("s2:", s2)
+		}
+		result = append(result, s2...)
 	}
-	p := partition(s) // n ->  l r   1/n-1
-	// Recursion.
-	QuickSort(s[:p])
-	QuickSort(s[p+1:])
+	return
 }
 
 // 1 2   3 4   5 6   7 8
@@ -48,6 +59,6 @@ func QuickSort(s []int) {
 
 func main() {
 	s := []int{4, 3, 17, 33, 101, 17, 6, 2}
-	QuickSort(s)
-	fmt.Println(s)
+	fmt.Println(QuickSort(s))
+	//fmt.Println(s)
 }
